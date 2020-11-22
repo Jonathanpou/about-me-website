@@ -1,2 +1,2 @@
 # about-me-website
-Project to learn html, css and js to make a website about myself
+This repositories is a website made to improve my html, css and javascript(reactjs)   abilities
