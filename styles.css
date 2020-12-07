@@ -8,7 +8,9 @@
 }
 html {
     scroll-behavior: smooth;
-  }
+}
+
+/* navbar */
 li, a, button {
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
@@ -20,6 +22,7 @@ li, a, button {
 header {
     display: flex;
     position: fixed;
+    z-index:1;
     width: 100%;
     justify-content: flex-end;
     align-items: center;
@@ -72,10 +75,10 @@ button:hover {
     background-color: rgba(220, 20, 60, 0.8);
 }
 
-
+/* homepage */
 .home {
     display: flex;
-    background: url("resurces/outrun-vaporwave-hd-wallpaper-preview.jpg") no-repeat center;
+    background: url("resurces/neon-background.jpg") no-repeat center;
     height: 100vh;
     background-size: cover;
     background-attachment: fixed;
@@ -99,92 +102,96 @@ button:hover {
     text-shadow: 2px 2px 2px #292929;
 }
 
+
+/*wordCarousel*/
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:700,400);
 
 .carousel {
-  position: relative;
-  width: 100%;
-  text-align: center;
-  font-size: 40px;
-  line-height: 75px;
-  height: 75px;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+    line-height: 75px;
+    height: 75px;
 }
 .carousel .pre {
-  position: absolute;
-  top: 0;
-  height: 75px;
-  text-shadow: 2px 2px 2px #292929;
+    position: absolute;
+    top: 0;
+    height: 75px;
+    text-shadow: 2px 2px 2px #292929;
 }
 .carousel .change_outer {
-  position: absolute;
-  top: 0;
-  left: 16%;
-  text-align: left;
-  height: 75px;
-  overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 16%;
+    text-align: left;
+    height: 75px;
+    overflow: hidden;
 }
 .carousel .change_outer .change_inner {
-  position: relative;
-  -webkit-animation: rotate 8s ease-in-out infinite;
+    position: relative;
+    -webkit-animation: rotate 8s ease-in-out infinite;
           animation: rotate 8s ease-in-out infinite;
 }
 .carousel .change_outer .element {
-  display: flex;
-  font-weight: 700;
-  text-shadow: 2px 2px 2px #292929;
+    display: flex;
+    font-weight: 700;
+    text-shadow: 2px 2px 2px #292929;
 }
 
 @-webkit-keyframes rotate {
-  0%, 20% {
-    -webkit-transform: translateY(0);
+    0%, 20% {
+        -webkit-transform: translateY(0);
             transform: translateY(0);
-  }
-  25%,45% {
-    -webkit-transform: translateY(-75px);
+    }
+    25%,45% {
+        -webkit-transform: translateY(-75px);
             transform: translateY(-75px);
-  }
-  50%,70% {
-    -webkit-transform: translateY(-150px);
-            transform: translateY(-150px);
-  }
-  75%,95% {
-    -webkit-transform: translateY(-225px);
-            transform: translateY(-225px);
-  }
-  100% {
-    -webkit-transform: translateY(-300px);
-            transform: translateY(-300px);
-  }
+    }
+    50%,70% {
+      -webkit-transform: translateY(-150px);
+              transform: translateY(-150px);
+    }
+    75%,95% {
+      -webkit-transform: translateY(-225px);
+              transform: translateY(-225px);
+    }
+    100% {
+      -webkit-transform: translateY(-300px);
+              transform: translateY(-300px);
+    }
 }
 
 @keyframes rotate {
-  0%, 20% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  25%,45% {
-    -webkit-transform: translateY(-75px);
-            transform: translateY(-75px);
-  }
-  50%,70% {
-    -webkit-transform: translateY(-150px);
-            transform: translateY(-150px);
-  }
-  75%,95% {
-    -webkit-transform: translateY(-225px);
-            transform: translateY(-225px);
-  }
-  100% {
-    -webkit-transform: translateY(-300px);
-            transform: translateY(-300px);
-  }
+    0%, 20% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    25%,45% {
+      -webkit-transform: translateY(-75px);
+              transform: translateY(-75px);
+    }
+    50%,70% {
+      -webkit-transform: translateY(-150px);
+              transform: translateY(-150px);
+    }
+    75%,95% {
+      -webkit-transform: translateY(-225px);
+              transform: translateY(-225px);
+    }
+    100% {
+      -webkit-transform: translateY(-300px);
+              transform: translateY(-300px);
+    }
 }
 
+
+/*footer*/
 footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    min-height: 16vh;
     background: #000;
 }
 footer ul {
