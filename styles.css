@@ -6,7 +6,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+html {
+    scroll-behavior: smooth;
+  }
 li, a, button {
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
@@ -17,14 +19,27 @@ li, a, button {
 
 header {
     display: flex;
+    position: fixed;
+    width: 100%;
     justify-content: flex-end;
     align-items: center;
-    padding: 30px 10%;
-    background-color: #24252A;
+    padding: 15px 10%;
+    background-color: #292929;
 }
 
 .logo {
+    border: 1px solid crimson;
+    padding: 10px 15px;
+    background-color: crimson;
+    text-align: center;
     margin-right: auto; 
+    border-radius: 6px;
+}
+
+.text_logo {
+    text-align: center;
+    display: flex;
+    font-size: 28px;
 }
 
 .nav__links {
@@ -46,7 +61,7 @@ header {
 
 button {
     padding: 9px 25px;
-    background-color: rgba(0, 136, 169, 1);
+    background-color: rgba(220, 20, 60, 1);
     border: none;
     border-radius: 50px;
     cursor: pointer;
@@ -54,12 +69,116 @@ button {
 }
 
 button:hover {
-    background-color: rgba(0, 136, 169, 0.8);
+    background-color: rgba(220, 20, 60, 0.8);
 }
 
 
+.home {
+    display: flex;
+    background: url("resurces/outrun-vaporwave-hd-wallpaper-preview.jpg") no-repeat center;
+    height: 100vh;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #fff;
+    min-height: 500px;
+    font-family: "Montserrat", sans-serif;
+}
+  
+.home .max-width {
+    margin: auto 0 auto 40px;
+}
+  
+.home .home__content .text1 {
+    font-size: 34px;
+}
+  
+.home .home__content .text2 {
+    font-size: 75px;
+    font-weight: 600;
+    margin-left: -3px;
+    text-shadow: 2px 2px 2px #292929;
+}
 
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,400);
 
+.carousel {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  font-size: 40px;
+  line-height: 75px;
+  height: 75px;
+}
+.carousel .pre {
+  position: absolute;
+  top: 0;
+  height: 75px;
+  text-shadow: 2px 2px 2px #292929;
+}
+.carousel .change_outer {
+  position: absolute;
+  top: 0;
+  left: 16%;
+  text-align: left;
+  height: 75px;
+  overflow: hidden;
+}
+.carousel .change_outer .change_inner {
+  position: relative;
+  -webkit-animation: rotate 8s ease-in-out infinite;
+          animation: rotate 8s ease-in-out infinite;
+}
+.carousel .change_outer .element {
+  display: flex;
+  font-weight: 700;
+  text-shadow: 2px 2px 2px #292929;
+}
+
+@-webkit-keyframes rotate {
+  0%, 20% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  25%,45% {
+    -webkit-transform: translateY(-75px);
+            transform: translateY(-75px);
+  }
+  50%,70% {
+    -webkit-transform: translateY(-150px);
+            transform: translateY(-150px);
+  }
+  75%,95% {
+    -webkit-transform: translateY(-225px);
+            transform: translateY(-225px);
+  }
+  100% {
+    -webkit-transform: translateY(-300px);
+            transform: translateY(-300px);
+  }
+}
+
+@keyframes rotate {
+  0%, 20% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  25%,45% {
+    -webkit-transform: translateY(-75px);
+            transform: translateY(-75px);
+  }
+  50%,70% {
+    -webkit-transform: translateY(-150px);
+            transform: translateY(-150px);
+  }
+  75%,95% {
+    -webkit-transform: translateY(-225px);
+            transform: translateY(-225px);
+  }
+  100% {
+    -webkit-transform: translateY(-300px);
+            transform: translateY(-300px);
+  }
+}
 
 footer {
     display: flex;
@@ -72,21 +191,20 @@ footer ul {
     position: relative;
     display: flex;
 }
-footer ul li {
+footer ul span {
     position: relative;
     list-style: none;
     margin: 0 20px;
     cursor: pointer;
 }
-footer ul li a {
+footer ul span a {
     text-decoration: none;
 }
-footer ul li a .fa {
+footer ul span a .fa {
     font-size: 6em;
     color: #222;
-
 }
-footer ul li::before {
+footer ul span::before {
     font-family: fontAwesome;
     position: absolute;
     top: 0;
@@ -96,26 +214,26 @@ footer ul li::before {
     overflow: hidden;
     transition: 0.5s ease-in-out;
 }
-footer ul li:nth-child(1)::before {
+footer ul span:nth-child(1)::before {
     content: '\f08c';
     color: #0077b5;
     border-bottom: 4px solid #0077b5;
 }
-footer ul li:nth-child(2)::before {
+footer ul span:nth-child(2)::before {
     content: '\f09b';
     color: #fafafa;
     border-bottom: 4px solid #fafafa;
 }
-footer ul li:nth-child(3)::before {
+footer ul span:nth-child(3)::before {
     content: '\f099';
     color: #1da1f2;
     border-bottom: 4px solid #1da1f2;
 }
-footer ul li:nth-child(4)::before {
+footer ul span:nth-child(4)::before {
     content: '\f08c';
     color: #0077b5;
     border-bottom: 4px solid #0077b5;
 }
-footer ul li:hover::before {
+footer ul span:hover::before {
     height: 100%;
 }
