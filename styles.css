@@ -5,12 +5,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
 }
 html {
     scroll-behavior: smooth;
 }
 
-/* navbar */
+/*  navbar  */
 li, a, button {
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
@@ -75,7 +76,7 @@ button:hover {
     background-color: rgba(220, 20, 60, 0.8);
 }
 
-/* homepage */
+/*  homepage  */
 .home {
     display: flex;
     background: url("resurces/neon-background.jpg") no-repeat center;
@@ -102,8 +103,36 @@ button:hover {
     text-shadow: 2px 2px 2px #292929;
 }
 
+section{
+    height: 100vh;
+}
 
-/*wordCarousel*/
+section span {
+    position:absolute;
+    pointer-events: none;
+    background: #fff;
+    animation: animate 5s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        transform: scale(0) translateY(0) rotate(0deg);
+        opacity: 0; 
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1) translateY(-500%) rotate(360deg);
+        opacity: 0; 
+    }
+}
+
+
+/*  wordCarousel    */
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:700,400);
 
 .carousel {
@@ -186,7 +215,49 @@ button:hover {
 }
 
 
-/*footer*/
+/*  About   */
+.about_h {
+    padding-top: 2%;
+    text-align: center;
+}
+
+.column {
+    float: left;
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+}
+  
+.left {
+    width: 50%;
+}
+  
+.right {
+    width: 50%;
+}
+
+img {
+    padding-top: 8%;
+    padding-left: 10%;
+    width: 250px;
+    height: 250px;
+}
+
+.row .h2 {
+    margin: auto;
+}
+
+.row .p {
+    text-align: center;
+}
+
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/*  footer  */
 footer {
     display: flex;
     justify-content: center;
@@ -225,21 +296,25 @@ footer ul span:nth-child(1)::before {
     content: '\f08c';
     color: #0077b5;
     border-bottom: 4px solid #0077b5;
+    pointer-events: none;
 }
 footer ul span:nth-child(2)::before {
     content: '\f09b';
     color: #fafafa;
     border-bottom: 4px solid #fafafa;
+    pointer-events: none;
 }
 footer ul span:nth-child(3)::before {
     content: '\f099';
     color: #1da1f2;
     border-bottom: 4px solid #1da1f2;
+    pointer-events: none;
 }
 footer ul span:nth-child(4)::before {
     content: '\f08c';
     color: #0077b5;
     border-bottom: 4px solid #0077b5;
+    pointer-events: none;
 }
 footer ul span:hover::before {
     height: 100%;

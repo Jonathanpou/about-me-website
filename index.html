@@ -11,12 +11,12 @@
 <body>
     <header>
         <div class="logo">
-            <a class="text_logo" href="#">J.</a>
+            <a class="text_logo" href="#home"> J. </a>
         </div>
         <nav>
             <ul class="nav__links">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="#row">About</a></li>
                 <li><a href="#skills">Skills</a></li>
             </ul>
         </nav>
@@ -25,6 +25,39 @@
 
 <!---Home Page---->
  <section class="home" id="home">
+   <script>
+
+    const colors = [
+      '#2196f3',
+      '#e91e63',
+      '#feb3b',
+      '#74ff1d'
+    ]
+
+     function createSquare() {
+       const section = document.querySelector('section');
+       const square = document.createElement('span');
+
+       var size = Math.random() * 50;
+
+       square.style.width = 20 + size + 'px';
+       square.style.height = 20 + size + 'px';
+
+       square.style.top = Math.random() * innerHeight + 'px';
+       square.style.left = Math.random() * innerWidth + 'px';
+
+      const bg = colors[Math.floor(Math.random() * colors.length)];
+      square.style.background = bg;
+
+       section.appendChild(square);
+
+       setTimeout(() => {
+         square.remove()
+       },5000)
+      }
+
+      setInterval(createSquare, 150)
+   </script>
     <div class="max-width">
          <class class="home__content">
             <div class="text1">Hello there, my name is</div>
@@ -45,45 +78,36 @@
         </div>
     </div>
 </section>
-
-<section class="about" id="about">
-    <div class="max-width">
-        <div class="about__content">
-            <div class="columm left">
-                <img src="/resurces/image.jpeg" alt="profile">
-            </div>
-            <div class="column right">
-                <div class="text">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                        Sed faucibus laoreet lectus, vehicula ullamcorper nunc tincidunt eu. 
-                        Donec aliquam pharetra est, vitae finibus est pellentesque ut. 
-                        Vestibulum cursus auctor risus nec fringilla. 
-                        Nam in libero pulvinar metus pharetra scelerisque. 
-                        Cras a ullamcorper velit, non commodo tortor. 
-                        Pellentesque maximus imperdiet dui, dapibus aliquet est posuere in. 
-                        In hac habitasse platea dictumst. Nam viverra elementum pellentesque.
-                    </p>
-                </div>
-            </div>
-        </div>
+<!-----About----->
+<div class="row">
+    <div class="about_h">
+        <h1>About me</h1>
     </div>
-</section>
-
-<section class="skills" id="skillsabout">
-    <div class="max-width">
-         <class class="skills__content">
-             <div>
-                 
-             </div>
+    <div class="column left" style="background-color:#ffffff;">
+      <img src="/resurces/image.jpeg" alt="">
     </div>
-</section>
+    <div class="column right" style="background-color:#ffffff;;">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+          Maecenas egestas lectus non turpis consequat, in ullamcorper ante dapibus. 
+          Pellentesque tincidunt turpis a ipsum faucibus, id rhoncus lectus porta. 
+          Cras dictum, nisl a imperdiet varius, justo turpis dapibus libero, sed condimentum orci turpis at ex. 
+          Quisque interdum nulla eget diam gravida, quis tincidunt tellus venenatis. 
+          Proin velit elit, interdum at venenatis ut, posuere vitae tellus. 
+          Phasellus et mauris tristique, iaculis ipsum sit amet, luctus tortor. 
+          Fusce efficitur sem ut ex cursus blandit. 
+          Proin odio sapien, tristique nec urna nec, ultricies dapibus lectus.
+        </p>
+    </div>
+  </div>
 
+
+
+<!---footer--->
 <footer>
     <ul>
         <span><a href="https://www.linkedin.com/in/jonathan-h%C3%B8xbroe-poulsen-257bb888/"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></span>
-        <span><a href="#"><i class="fa fa-github" aria-hidden="true"></i></a></span>
-        <span><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></span>
+        <span><a href="https://github.com/Jonathanpou"><i class="fa fa-github" aria-hidden="true"></i></a></span>
+        <span><a href="https://twitter.com/JonathanHPou"><i class="fa fa-twitter" aria-hidden="true"></i></a></span>
     </ul>
 </footer>
 </body>
